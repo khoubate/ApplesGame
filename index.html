@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Apple Tree</title>
+  </head>
+  <body>
+    <header>
+    <p> Falling Apple Game </p>
+  </header>
+    <main>
+      <canvas id="gameCanvas"></canvas>
+      <div id="gameStartDiv" class="gameUI">
+        <h1>Catch The Fruit</h1>
+        <p>You have 30 seconds to catch the falling apples!</p>
+        <p>Catch more than 10 you win.</p>
+        <p>Catch less than 10 you lose.</p>
+        <p>Click Start to begin</p>
+        <button id="gameStartBtn"><p>start</p></button>
+      </div>
+      <div id="gameEndDiv" class="gameUI">
+        <p>Game Over</p>
+        <p>🎮</p>
+        <h1>You <span id="gameWinLoseSpan"></span></h1>
+        <h1>Final Score: <span id="gameEndScoreSpan"></span></h1>
+        <p>Click Restart to play again</p>
+        <button id="restartGameBtn"><p>Restart</p></button>
+      </div>
+      </div>
+    </main>
+    <footer>
+      <p> © 2024 By Khoubate 👏</p>
+    </footer>
+    <script type="module" src="/main.js"></script>
+  </body>
+</html>
+ 
