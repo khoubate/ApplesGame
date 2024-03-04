@@ -1,4 +1,4 @@
-# Apple Catcher Game
+# Apples Game
 
 Welcome to the Apples Game! Test your reflexes and hand-eye coordination by catching falling apples within a limited time. This game is a fun and engaging way to challenge yourself and see how many apples you can catch before the time runs out.
 
