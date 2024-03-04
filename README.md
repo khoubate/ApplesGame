@@ -36,7 +36,10 @@ Welcome to the Apples Game! Test your reflexes and hand-eye coordination by catc
 ## How to Run the Game
 
 1. Download or clone the repository.
-2. Open the `index.html` file in a web browser.
+2. Navigate to the  `ApplesGame` folder.
+3. Run the command `npm run dev` to start the server locally.
+4. Open your web browser and go to `http://localhost:5173/`.        
+5. Enjoy playing the game.
 
 ## License
 
