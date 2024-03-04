@@ -5,13 +5,14 @@
   --accClr: #0D0D35;
 }
 
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  }
+}
 
-html,body{
+html,
+body {
   height: 100%;
 }
 
@@ -70,43 +71,46 @@ main {
   display: none;
 }
 
-#gameStartBtn{
+#gameStartBtn {
   display: inline-block;
   width: 100px;
-  padding:8px 15px;
+  padding: 8px 15px;
   margin: 20px 0;
   text-align: center;
   font-family: inherit;
-  border-radius: 10px;;
+  border-radius: 10px;
+  ;
 }
 
-#gameStartBtn p{
+#gameStartBtn p {
   margin-top: 0;
 }
 
-#gameStartBtn:hover{
+#gameStartBtn:hover {
   background-color: var(--dkClr);
   border: 0.5px solid var(--liClr);
   color: var(--liClr);
-  cursor:pointer;
-} 
+  cursor: pointer;
+}
 
-#restartGameBtn{
+#restartGameBtn {
   display: inline-block;
   width: 100px;
-  padding:8px 15px;
+  padding: 8px 15px;
   margin: 20px 0;
   text-align: center;
   font-family: inherit;
-  border-radius: 10px;;
+  border-radius: 10px;
+  ;
 }
-#restartGameBtn p{
+
+#restartGameBtn p {
   margin-top: 0;
 }
 
-#restartGameBtn:hover{
+#restartGameBtn:hover {
   background-color: var(--dkClr);
   border: 1px solid var(--liClr);
   color: var(--liClr);
-  cursor:pointer;
-} 
+  cursor: pointer;
+}

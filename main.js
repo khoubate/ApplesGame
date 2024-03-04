@@ -49,7 +49,7 @@ class GameScene extends Phaser.Scene {
     this.load.audio("coin", ["/assets/coin.mp3"]);
 
     this.load.image("money", "/assets/money.png")
-   
+
   }
 
   create() {
@@ -58,9 +58,9 @@ class GameScene extends Phaser.Scene {
 
     // Set up the music and play 
     this.coinMusic = this.sound.add("coin")
-    this.bgMusic = this.sound.add("bgMusic") 
+    this.bgMusic = this.sound.add("bgMusic")
     this.bgMusic.play()
-   // this.bgMusic.stop()
+    // this.bgMusic.stop()
 
     this.add.image(0, 0, "bg").setOrigin(0.0);
 
@@ -86,20 +86,20 @@ class GameScene extends Phaser.Scene {
       font: "25px Arial",
       fill: "#000000",
     });
-// Create the game timer
-    this.timedEvent = this.time.delayedCall(30000,this.gameOver,[], this)
+    // Create the game timer
+    this.timedEvent = this.time.delayedCall(30000, this.gameOver, [], this)
 
-//  Simple particle emitter that will emit small, slowly moving "money".
-    this.emitter=this.add.particles(0,0,"money",{
-      speed:100,
-      gravityY:speedDown-200,
-      scale:0.04,
-      duration:100,
+    //  Simple particle emitter that will emit small, slowly moving "money".
+    this.emitter = this.add.particles(0, 0, "money", {
+      speed: 100,
+      gravityY: speedDown - 200,
+      scale: 0.04,
+      duration: 100,
       emitting: false,
     })
     // Set up the emitter to follow the player object from its center, without being affected by gravity.
     this.emitter.startFollow(this.player, this.player.width / 2, this.player.height / 2, true);
-  
+
   }
 
   update() {
@@ -137,18 +137,18 @@ class GameScene extends Phaser.Scene {
     this.textScore.setText(`Score: ${this.points}`)
   }
 
-// Game Over function
-  gameOver(){
+  // Game Over function
+  gameOver() {
     this.sys.game.destroy(true)
-   // console.log("🎮 Game Over 😊");
-   if(this.points >=10){
-    gameEndScoreSpan.textContent =  "Your score is "+this.points+". That's impressive!";
-    gameWinLoseSpan.textContent = " Win! 👏😊"
-    }else{
-      gameEndScoreSpan.textContent =  "Your score is "+this.points+". Try harder next time.";
-      gameWinLoseSpan.textContent  = " Lost, sorry 😞!"
-   }
-   gameEndDiv.style.display="flex"
+    // console.log("🎮 Game Over 😊");
+    if (this.points >= 10) {
+      gameEndScoreSpan.textContent = "Your score is " + this.points + ". That's impressive!";
+      gameWinLoseSpan.textContent = " Win! 👏😊"
+    } else {
+      gameEndScoreSpan.textContent = "Your score is " + this.points + ". Try harder next time.";
+      gameWinLoseSpan.textContent = " Lost, sorry 😞!"
+    }
+    gameEndDiv.style.display = "flex"
 
   }
 }
@@ -170,8 +170,8 @@ const config = {
 
 const game = new Phaser.Game(config);
 
-gameStartBtn.addEventListener('click', () =>{
-  gameStartDiv.style.display= 'none';
+gameStartBtn.addEventListener('click', () => {
+  gameStartDiv.style.display = 'none';
   game.scene.resume('scene-game');
 });
 
