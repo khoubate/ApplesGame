@@ -1,4 +1,4 @@
-# <p align="center"> Apples Game <img src="ur/assets/apple.png"></p>
+# <p align="center"> Apples Game</p>
 
 ## <p align="center"><a href="https://applesgame.vercel.app/" target="_blank">Game Link</a></P>
 
