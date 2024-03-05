@@ -6,7 +6,7 @@ const sizes = {
   height: 500,
 };
 // Game Speed
-const speedDown = 600;
+const speedDown = 300;
 
 const gameStartDiv = document.querySelector("#gameStartDiv");
 const gameStartBtn = document.querySelector("#gameStartBtn");
@@ -39,9 +39,9 @@ class GameScene extends Phaser.Scene {
 
   preload() {
     // load the background
-    this.load.image("bg", "/assets/bg.png");
+    this.load.image("bg", "/assets/bg.jpeg");
     // load the player basket
-    this.load.image("basket", "/assets/basket.png");
+    this.load.image("basket", "/assets/bskt.png");
     // Load the apple image
     this.load.image("apple", "/assets/apple.png");
     // Add Music to the game
@@ -62,7 +62,7 @@ class GameScene extends Phaser.Scene {
     this.bgMusic.play()
     // this.bgMusic.stop()
 
-    this.add.image(0, 0, "bg").setOrigin(0.0);
+    this.add.image(0, 0, "bg").setOrigin(0.0).setOrigin(0.0).setDisplaySize(sizes.width, sizes.height);;
 
     this.player = this.physics.add.image(0, sizes.height - 100, "basket").setOrigin(0.0);
     this.player.setImmovable(true);
@@ -78,12 +78,12 @@ class GameScene extends Phaser.Scene {
     this.cursor = this.input.keyboard.createCursorKeys();
     // Display  score on the screen
     this.textScore = this.add.text(sizes.width - 120, 10, "Score:0", {
-      font: "25px Arial",
+      font: "bold 25px Arial",
       fill: "#000000",
     });
     // Display time on the screen   
-    this.textTime = this.add.text(10, 10, "Remaining Time: 00", {
-      font: "25px Arial",
+    this.textTime = this.add.text(10, 10, "Timer: 00", {
+      font: "bold 25px Arial",
       fill: "#000000",
     });
     // Create the game timer
@@ -106,7 +106,7 @@ class GameScene extends Phaser.Scene {
     //Get the remaining time in seconds
     this.remainingTime = this.timedEvent.getRemainingSeconds()
     //Update the time UI with the remaining time
-    this.textTime.setText(`Remaining Time: ${Math.round(this.remainingTime).toString()} `)
+    this.textTime.setText(`Timer: ${Math.round(this.remainingTime).toString()} `)
 
     if (this.target.y >= sizes.height) {
       this.target.setY(0);
@@ -141,7 +141,7 @@ class GameScene extends Phaser.Scene {
   gameOver() {
     this.sys.game.destroy(true)
     // console.log("🎮 Game Over 😊");
-    if (this.points >= 10) {
+    if (this.points >= 15) {
       gameEndScoreSpan.textContent = "Your score is " + this.points + ". That's impressive!";
       gameWinLoseSpan.textContent = " Win! 👏😊"
     } else {
