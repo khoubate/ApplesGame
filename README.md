@@ -1,5 +1,6 @@
 # Apples Game
 
+# `https://applesgame.vercel.app/`
 Welcome to the Apples Game! Test your reflexes and hand-eye coordination by catching falling apples within a limited time. This game is a fun and engaging way to challenge yourself and see how many apples you can catch before the time runs out.
 
 ## Instructions
@@ -32,14 +33,6 @@ Welcome to the Apples Game! Test your reflexes and hand-eye coordination by catc
 - HTML
 - CSS
 - JavaScript
-
-## How to Run the Game
-
-1. Download or clone the repository.
-2. Navigate to the  `ApplesGame` folder.
-3. Run the command `npm run dev` to start the server locally.
-4. Open your web browser and go to `http://localhost:5173/`.        
-5. Enjoy playing the game.
 
 ## License
 
