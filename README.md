@@ -1,6 +1,6 @@
-# Apples Game
+# <p align="center"> Apples Game <img src="ur/assets/apple.png" alt="Alt Text"></p>
 
-## <a href="https://applesgame.vercel.app/" target="_blank">Game Link</a>
+## <p align="center"><a href="https://applesgame.vercel.app/" target="_blank">Game Link</a></P>
 
 
 Welcome to the Apples Game! Test your reflexes and hand-eye coordination by catching falling apples within a limited time. This game is a fun and engaging way to challenge yourself and see how many apples you can catch before the time runs out.
